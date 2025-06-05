@@ -4,20 +4,16 @@ import com.fasterxml.jackson.databind.PropertyNamingStrategy;
 import com.fasterxml.jackson.databind.annotation.JsonNaming;
 
 @JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
-public class BookCreateRequestDTO {
-
-    private String title;
-
-    private Long authorId;
-
+public class AuthorBookResponseDTO {
+    private String bookName;
     private String description;
 
-    public String getTitle() {
-        return title;
+    public String getBookName() {
+        return bookName;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setBookName(String bookName) {
+        this.bookName = bookName;
     }
 
     public String getDescription() {
@@ -26,13 +22,5 @@ public class BookCreateRequestDTO {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public Long getAuthorId() {
-        return authorId;
-    }
-
-    public void setAuthorId(Long authorId) {
-        this.authorId = authorId;
     }
 }
